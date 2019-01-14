@@ -1,0 +1,101 @@
+//
+//  main.swift
+//  2_АкифьевМаксим
+//
+//  Created by Максим Акифьев on 14/01/2019.
+//  Copyright © 2019 Максим Акифьев. All rights reserved.
+//
+
+import Foundation
+
+
+//Четное или нечетное
+func chet() {
+let a  = 4
+let b = 2
+
+if a % b == 0 {
+    print ("Заданное число четное")
+}
+else
+{
+    print ("Заданное число нечетное")
+}
+}
+/*Вариант через Switch
+switch a {
+case _ where a % 2 == 0:
+    print ("Четное")
+case _ where a % 2 != 0:
+    print ("Нечетное")
+default:
+    print ("Ошибка")
+} */
+
+//делится ли на 3 без остатка?
+func Del3 () {
+let a1 = 777
+if (a1 % 3) == 0 {
+    print ("Делится на 3 без остатка")
+}
+else{
+    print ("Не делится на 3 без остатка")
+    
+}
+}
+/* Вариант через Switch
+switch a1 {
+case _ where a1 % 3 == 0:
+    print ("Делится нацело на 3")
+case _ where a1 % 3 != 0:
+    print ("Не делится нацело на 3")
+default:
+    print ("Ошибка")
+} */
+//Массив из 100 чисел
+
+var array: [Int] = []
+for i in 0...99{
+    array.append(i)
+
+    
+}
+
+for del in array {
+    if (del % 2) == 0 {
+        array.remove(at: array.index(of: del)!)
+        // for del in array where del % 2 == {
+        // print del
+        // }
+        
+
+
+    }
+}
+
+    for xen in array {
+        if (xen % 3) == 0 {
+            array.remove (at: array.index(of:xen)!)
+    
+            print (xen);
+        }
+    }
+
+func fibon() {
+var q = 0
+var w = 1
+var fn = 0
+var bomb :[Int] = []
+    bomb.append(contentsOf: array)
+for _ in 0...100{
+q += w
+w = q - w
+        fn = q + w  // Почему ругается?
+    bomb.append(fn)
+        print(fn)
+   }
+}
+fibon()
+chet()
+Del3()
+
